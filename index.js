@@ -19,7 +19,13 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge = 18;
 
+if (votingAge >= 18){
+  console.log('task 1a:', true);
+} else {
+    console.log('task 1a:', false);
+  }
 
 
 /*
@@ -33,9 +39,16 @@ Do the following:
 
    HINT: no function required
 */
+let brother = 'Ben';
+let behavior = 'crazy';
 
+if (behavior === 'crazy'){
+  brother = 'Gavin';
+} else{
+  brother = 'Ben';
+}
 
-
+console.log('task 1b:', brother);
 
 
 /*
@@ -48,9 +61,9 @@ Do the following:
 
    HINT: look up the Number method
 */
+const year = '1999';
 
-
-
+console.log('task 1c:', Number(year));
 
 /*
 Task 1d - Multiply
@@ -61,9 +74,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(num1, num2){
-  return num1 * num2;
+function multiply(a, b){
+  return a * b;
 }
+
+console.log('task 1d:', multiply(21, 7));
 
 
 
@@ -77,9 +92,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
+
+console.log('task 2:', dogYears(23));
 
 
 
@@ -129,9 +146,25 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  if (age >= 1 && weight <= 5){
+    return weight * 0.05;
+  }else if (age >= 1 && weight >= 6 && weight <= 10){
+    return weight * 0.04;
+  }else if (age >= 1 && weight >= 11 && weight <= 15){
+    return weight * 0.03;
+  }else if (age >= 1 && weight > 15){
+    return weight * 0.02;
+  }else if (age < 1 && age >= 0.583){
+    return weight * 0.04;
+  }else if (age < 0.583 && age >= 0.333){
+    return weight * 0.05;
+  }else if (age < 0.333 && age >= 0.166){
+    return weight * 0.1
+  }
 }
+
+console.log('task 3:', hungryDog(12, 4));
 
 
 
